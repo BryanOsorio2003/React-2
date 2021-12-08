@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card } from "../../UI/Card/Card"
-const url = 'https://rickandmortyapi.com/api/character'
 
 export const Main = () => {
+    const url = 'https://rickandmortyapi.com/api/character'
+    const [data, setData] = useState(data);
+
     fetch(url)
         .then(response => response.json())
         .then(data => {
@@ -11,9 +13,6 @@ export const Main = () => {
         });
     return (
 
-        <Card />
+        <Card data={data}/>
     )
 }
-
-
-
