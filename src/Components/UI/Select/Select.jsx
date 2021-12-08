@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import './Select.css';
 
 
-// const personajes = []; 
-
 export const Select=()=> {
   const [data,setCharacters] = useState([])
   const url = 'https://rickandmortyapi.com/api/character' 
