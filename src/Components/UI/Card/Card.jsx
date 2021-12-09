@@ -10,16 +10,18 @@ export const Card = () => {
     .then(data=>setCharacters(data.results));
     return (
         <>
-        <div className="Card">
-        {
-            data.map((option)=>(
-                <>
-                    <p>{option.name}</p>
-                    <img src={option.image} alt={option.character} />
-                    <p>{option.quote}</p>
-                </>
-                ))
-        }
+        <div className="Cards">
+            <div className="Card">
+            {
+                data.map((option)=>(
+                    <>
+                        <p>{option.name}</p>
+                        <img src={option.image} alt={option.character} />
+                        <p>{option.quote}</p>
+                    </>
+                    ))
+            }
+            </div>
         </div>
         </>
     )

@@ -3,8 +3,10 @@
     height:30vh;
     background-color: red;
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
-    /* flex-wrap: wrap; */
+}
+.Cards{
+    width: 100vw;
+    flex-wrap: wrap;
 }

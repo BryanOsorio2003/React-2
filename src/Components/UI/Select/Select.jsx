@@ -5,13 +5,9 @@ import './Select.css';
 export const Select=()=> {
   const [data,setCharacters] = useState([])
   const url = 'https://rickandmortyapi.com/api/character' 
-
   fetch(url)
   .then(response => response.json())
-  .then(data=>setCharacters(data.results));  
-    data.map((option)=>(
-      console.log(option.id)
-    ))
+  .then(data=>setCharacters(data.results));
   return(
     <>
     <header>
