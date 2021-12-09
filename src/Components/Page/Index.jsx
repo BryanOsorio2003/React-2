@@ -5,8 +5,10 @@ import { Header } from "../Layout/Header/Header"
 export const Index = () =>{
     return(
         <>
-            <Header/>
-            <Main/>
+            <body>
+                <Header/>
+                <Main/>
+            </body>
         </>
     )
 }

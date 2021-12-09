@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import './Card.css';
 
 export const Card = () => {
-    const [data,setCharacters] = useState([])
+    const [datal,setCharacters] = useState([])
     const url = 'https://rickandmortyapi.com/api/character' 
     fetch(url)
     .then(response => response.json())
@@ -13,7 +13,7 @@ export const Card = () => {
         <div className="Cards">
             <div className="Card">
             {
-                data.map((option)=>(
+                datal.map((option)=>(
                     <>
                         <p>{option.name}</p>
                         <img src={option.image} alt={option.character} />

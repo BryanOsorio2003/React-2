@@ -3,7 +3,7 @@ import './Select.css';
 
 
 export const Select=()=> {
-  const [data,setCharacters] = useState([])
+  const [datal,setCharacters] = useState([])
   const url = 'https://rickandmortyapi.com/api/character' 
   fetch(url)
   .then(response => response.json())
@@ -15,7 +15,7 @@ export const Select=()=> {
         <option value="">select a character</option>
         <option value="">All characters</option>
         {
-          data.map((option)=>(
+          datal.map((option)=>(
               <option value={option.id}>{option.name}</option>
           ))
         }
