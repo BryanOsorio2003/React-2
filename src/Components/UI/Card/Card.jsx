@@ -19,7 +19,7 @@ export const Card = () => {
                     <p>{option.quote}</p>
                 </>
                 ))
-            }
+        }
         </div>
         </>
     )

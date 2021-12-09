@@ -12,20 +12,19 @@ export const Select=()=> {
     data.map((option)=>(
       console.log(option.id)
     ))
-  
-    return(
-      <>
+  return(
+    <>
+    <header>
       <select name="Select" id="Select">
         <option value="">select a character</option>
         <option value="">All characters</option>
         {
           data.map((option)=>(
-            <>
               <option value={option.id}>{option.name}</option>
-            </>
           ))
         }
       </select>
-      </>
-      )
-    }
+    </header>
+    </>
+  )
+}
