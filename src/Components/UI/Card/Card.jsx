@@ -8,8 +8,6 @@ export const Card = () => {
     fetch(url)
     .then(response => response.json())
     .then(data=>setCharacters(data.results));
-    console.log(data.results);
-
     return (
         <>
         <div className="Card">
