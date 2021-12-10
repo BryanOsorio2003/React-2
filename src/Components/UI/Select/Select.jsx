@@ -3,12 +3,14 @@ import './Select.css';
 
 
 export const Select=()=> {
-  const [data,setCharacters] = useState([])
-  const url = 'https://rickandmortyapi.com/api/character' 
-  fetch(url)
-  .then(response => response.json())
-  .then(data=>setCharacters(data.results));
-
+  const [prueba,setCharacters] = useState([])
+  function ApiSelect() {
+    const url = 'https://rickandmortyapi.com/api/character' 
+    fetch(url)
+    .then(response => response.json())
+    .then(data=>setCharacters(data.results));
+  }
+  ApiSelect()
   return(
     <>
     <header>
@@ -16,8 +18,8 @@ export const Select=()=> {
         <option value="">select a character</option>
         <option value="">All characters</option>
         {
-          data.map((option)=>(
-              <option value={option.id}>{option.name}</option>
+          prueba.map(option=>(
+              <option key={option.id} value={option.id}>{option.name}</option>
           ))
         }
       </select>
